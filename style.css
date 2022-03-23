@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    color: aliceblue;
+}
+body{
+    height: 100vh;
+    /* width: 100vw; */
+    padding: 0 20px 100px 20px;
+    background: linear-gradient(45deg, rgb(93, 38, 197), rgb(75, 49, 146));
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: .1fr 1fr 1fr;
+    grid-template-areas: "h h"
+                         "t t1"
+                         "f f";
+    column-gap: 10px;
+}
+.header{
+    grid-area: h;
+}
+.header h1{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.tableForm{
+    padding: 10px;
+    background-color: rgb(121, 7, 187);
+    grid-area: t;
+    justify-self: center;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0px 0 25px rgb(121, 7, 187);
+}
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%; height: 100%;
+}
+.form label{
+    font-size: 15pt;
+    padding: 3px;
+}
+.form input{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 25px;
+    color: black;
+    font-weight: 600;
+}
+#description{
+    height: 50px;
+    max-height: max-content;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    justify-items: center;
+    height: 30px;
+    margin: 5px 0;
+}
+.options input{
+    cursor: pointer;
+}
+.options label{
+    cursor: pointer;
+}
+.form button{
+    height: 30px;
+    background: rgba(30, 11, 138, 0.781);
+    border-radius: 10px;
+    border: none;
+    transition: .5s;
+    color: aliceblue;
+    font-weight: 800;
+}
+.form button:hover{
+    cursor: pointer;
+    box-shadow: 0 1px 25px rgba(30, 11, 138, 0.781);
+}
+.tableTasks{
+    background-color: rgb(121, 7, 187);
+    box-shadow: 0px 0 25px rgb(121, 7, 187);
+    grid-area: t1;
+    height: max-content;
+    width: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.hidden{
+    display: none;
+}
+.task{
+    padding: 20px;
+    border: 1px solid #999;
+    text-align: justify;
+    margin: 5px;
+    overflow-wrap: break-word;
+    cursor: pointer;
+    transition: .5s;
+}
+.task:hover{
+    box-shadow: 0 0 23px rgb(91, 9, 243);
+}
+.eraser{
+    padding: 5px 20px;
+    color: black;
+    margin: 7px 5px -3px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.done{
+    text-decoration: line-through;
+    color: #999;
+}
+.done h3{
+    color: #999;
+}
+.done p{
+    color: #999;
+}
+.alta{
+    background-color: rgb(139, 16, 16);
+}
+.media{
+    background-color: rgb(233, 182, 55);
+}
+.baixa{
+    background-color: rgb(62, 233, 47);
+    color: black;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+    position: relative;
+    margin: 30px 0;
+}
+
+@media (max-width:600px){
+    body{
+        padding: 0;
+        grid-template-columns: 1fr ;
+        grid-template-rows: .5fr 2fr max-content;
+        grid-template-areas: "h h"
+                             "t t"
+                             "t1 t1"
+                             "f f" ;
+                             row-gap: 20px;
+    }
+    .tableForm{
+        width: 90%;
+    }
+    .tableTasks{
+        width: 90vw;
+        flex-direction: column;
+    }
+}

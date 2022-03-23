@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Lista de tarefas</h1>
+    </div>
+
+    <div class="tableForm">
+        <div class="form">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="title" maxlength="30">
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="description" cols="30" rows="10"></textarea>
+            <h3>Prioridade</h3>
+
+            <div class="options">
+                <input type="checkbox" name="alta" id="alta" value="alta">
+                <label for="alta">alta</label>
+                <input type="checkbox" name="media" id="media" value="media">
+                <label for="media">media</label>
+                <input type="checkbox" name="baixa" id="baixa" value="baixa">
+                <label for="baixa">baixa</label>
+            </div>
+            <button type="submit" id="submit">Enviar</button>
+        </div>
+    </div>
+
+    <div class="tableTasks" id="tableTasks" >
+        
+    </div>
+
+    <footer>
+        <h4>Desenvolvido por <strong>Tiago da Silva</strong></h4>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
